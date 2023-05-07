@@ -3,7 +3,7 @@ import axios from "axios";
 async function fetchCountries() {
     try {
         const result = await axios.get('https://restcountries.com/v2/all');
-        // console.log(result);
+        console.log(result);
         const countries = result.data;
         countries.sort((a, b) => {
             return a.population - b.population;
@@ -47,5 +47,6 @@ function getRegionClass(currentRegion) {
     }
 }
 
-//
-// console.log('Hallo daar!');
+const countryInfoBox = document.getElementById('search-result');
+const errorMessageBox = document.getElementById('error-message');
+
